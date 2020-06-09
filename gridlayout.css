@@ -82,7 +82,7 @@
 
     .wrapper {
         position: relative;
-        background-image: url("./downloads/snow.png");
+        background-image: url("snow.png");
         color: white;
         height: 93vh;
         margin: auto;

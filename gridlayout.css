@@ -2,7 +2,6 @@
     .header{
         position: absolute;
         top: 0;
-        left:1em;
         right: 25em;
         white-space: normal;
         text-shadow: 2px 2px 2px grey;
@@ -38,7 +37,7 @@
         justify-content: flex-end;
         grid-column: span 2;
         grid-row : span 1;
-        background-color: teal; 
+        background-color: darkcyan; 
     }
     .wrapper>div:nth-child(2) {
         text-align: center;
@@ -51,10 +50,10 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         grid-row: span 2;
         grid-column: span 1;
-        background-color: thistle;
+        background-color: indigo
     }
 
     .wrapper>div:nth-child(4) {
@@ -63,21 +62,22 @@
         justify-content: space-around;
         grid-column: span 2;
         grid-row : span 1;
-        background-color: hotpink;
+        background-color: rgb(133, 120, 167);
     }
 
     .wrapper>div:nth-child(5) {
         text-align: center;
         grid-row: span 1;
         grid-column: span 1;
-        background-color: coral;
+        background-color: darkolivegreen; 
+        
     }
 
     .wrapper>div:nth-child(6) {
         text-align: center;
         grid-row: span 1;
         grid-column: span 1;
-        background-color: darkolivegreen; 
+        background-color: coral;
     }
 
     .wrapper {
@@ -105,7 +105,107 @@
         opacity: 0.5 !important;
         background-color: black !important; 
     }
-    
+    #swing{
+        animation: swing 5s linear infinite;
+        transform-origin: center;
+    }
+
+    @keyframes swing{
+        0%{
+            transform: rotatey(0deg);
+        }
+        25%{
+         transform: rotatey(30deg);  
+        }
+        50%{
+            transform: rotatey(0deg);  
+        }
+        75%{
+            transform: rotatey(-30deg);
+        }
+        100%{
+            transform: rotatey(0deg);
+        }
+    }
+    #cart{
+        animation: moving 3s linear infinite;
+        transform-origin: center;
+    }
+    @keyframes moving{
+        0%{
+            transform: translateX(0px);
+        }
+        25%{
+         transform: translateX(60px);  
+        }
+        50%{
+            transform: translateX(0px);  
+        }
+        75%{
+            transform: translateX(-60px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+    #sky1 , #sky2 , #sky3{
+        animation: sky 5s linear infinite;
+        transform-origin: center;
+    }
+    @keyframes sky{
+        0%{
+            transform: translateX(-1000px);
+        }
+        100%{
+         transform: translateX(1000px);  
+        }
+    }
+    #fb , #insta , #twitter{
+        animation: social 2s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    @keyframes social{
+        0%{
+            transform: rotatez(0deg)
+        }
+        100%{
+         transform: rotatez(360deg);  
+        }
+    }
+    #pillowleft ,#pillowright{
+        animation: pillow 5s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    @keyframes pillow{
+        0%{
+            transform: rotatez(0deg)
+        }
+        100%{
+         transform: rotatez(360deg);  
+        }
+    }
+    #icecream{
+        animation: icecream 5s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    @keyframes icecream{
+        0%{
+            transform: rotatey(0deg);
+        }
+        50%{
+         transform: rotatey(180deg);  
+        }
+        100%{
+            transform: rotatey(360deg);
+        }
+    }
+    .dreamer{
+        width: 50vw;
+        height: 40vh;
+    }
     @media only screen and (min-device-width: 200px) and (max-device-width: 500px){
     .wrapper {
         position: relative;

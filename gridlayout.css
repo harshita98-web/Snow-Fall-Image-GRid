@@ -1,0 +1,129 @@
+
+    .header{
+        position: absolute;
+        top: 0;
+        left:1em;
+        right: 25em;
+        white-space: normal;
+        text-shadow: 2px 2px 2px grey;
+        color: white;
+        font-size: 3vw;
+        font-weight: bold;
+    }
+    svg {
+        width: fit-content;
+        height: fit-content;
+    }
+    .heading{
+        color: black;
+        font-size:2.5vw;
+        text-shadow: 2px 2px 2px grey;
+        position: relative;
+    }
+    div:not(.wrapper) {
+        height: 100%;
+        width: 100%;
+    }
+    .wrapper > div {
+        opacity: 1;
+        border:solid 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .wrapper>div:nth-child(1) {
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+        grid-column: span 2;
+        grid-row : span 1;
+        background-color: teal; 
+    }
+    .wrapper>div:nth-child(2) {
+        text-align: center;
+        grid-row: span 1;
+        grid-column: span 1;
+        background-color: lightgreen;
+    }
+
+    .wrapper>div:nth-child(3) {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        grid-row: span 2;
+        grid-column: span 1;
+        background-color: thistle;
+    }
+
+    .wrapper>div:nth-child(4) {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        grid-column: span 2;
+        grid-row : span 1;
+        background-color: hotpink;
+    }
+
+    .wrapper>div:nth-child(5) {
+        text-align: center;
+        grid-row: span 1;
+        grid-column: span 1;
+        background-color: coral;
+    }
+
+    .wrapper>div:nth-child(6) {
+        text-align: center;
+        grid-row: span 1;
+        grid-column: span 1;
+        background-color: darkolivegreen; 
+    }
+
+    .wrapper {
+        position: relative;
+        background-image: url("./downloads/snow.png");
+        color: white;
+        height: 93vh;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        grid-gap: 0.4rem;
+        grid-template-columns: repeat(auto-fit, minmax(30vw, 5fr));
+        grid-template-rows: minmax(auto,auto);
+        animation: animate 2s linear infinite;
+    }
+    @keyframes animate {
+        0%{
+            background-position: 0px 0px;
+        }
+        100%{
+            background-position: 100px 350px;
+        }
+    }
+    .hovers{
+        opacity: 0.5 !important;
+        background-color: black !important; 
+    }
+    
+    @media only screen and (min-device-width: 200px) and (max-device-width: 500px){
+    .wrapper {
+        position: relative;
+        color: white;
+        height: 93vh;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        grid-gap: 0.4rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6 , 50%);
+    }
+    .wrapper > div:nth-child(n) {
+        grid-row:span 1;
+        grid-column: span 1;
+        display:inline;
+    }
+    svg{
+        width: auto;
+    }
+  }
